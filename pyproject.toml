@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-firewall"
+version = "0.1.0"
+description = "Fail-closed MCP tool-call firewall with a tamper-evident hash chain. Give your AI agent's MCP tools a local firewall."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "maintainers" }]
+keywords = ["mcp", "agent", "firewall", "security", "guardrail", "fail-closed"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = []
+
+[project.scripts]
+agent-firewall-demo = "agent_firewall.demo:main"
+
+[tool.setuptools]
+packages = ["agent_firewall", "audit_guard"]
+
+[tool.setuptools.package-data]
+audit_guard = ["py.typed"]

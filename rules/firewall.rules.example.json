@@ -1,0 +1,28 @@
+{
+  "notes": "agent-firewall example policy — deny by default, allowlist only. Replace with your own rules.",
+  "allowed_tools": ["files.read", "files.write", "search.query", "db.query"],
+  "blocked_tools": ["shell.exec", "shell.run", "network.ssh", "admin.grant"],
+  "red_lines": [
+    {
+      "id": "RL-001",
+      "description": "files.write must never touch system or secret paths",
+      "tool": "files.write",
+      "argument": "path",
+      "argument_regex": "(/etc/|system32|secrets|\\.env)"
+    },
+    {
+      "id": "RL-002",
+      "description": "search.query must not accept SQL injection probes",
+      "tool": "search.query",
+      "argument": "q",
+      "argument_regex": "(DROP TABLE|DELETE FROM|OR 1=1)"
+    },
+    {
+      "id": "RL-003",
+      "description": "db.query must not accept DDL statements",
+      "tool": "db.query",
+      "argument": "sql",
+      "argument_regex": "(^|\\s)(DROP|ALTER|TRUNCATE|GRANT)(\\s)"
+    }
+  ]
+}
