@@ -5,6 +5,21 @@
 
 `agent-firewall` is a zero-dependency Python library that sits **between an MCP client and its server** and inspects every `tools/call` message on the wire. It is part of the **Verifiable-agent family** — same design language as `agent-call-audit`, `agent-memory-ledger`, `agent-audit-gateway`, `agent-route-grid`.
 
+> ⚠️ **Research prototype — AI-assisted development.** This is an open-source
+> research/experimental prototype produced with AI assistance. It is provided
+> **AS IS**, without warranty of any kind, and is not a commercial or
+> production-grade product. Use at your own risk.
+
+## Verifiable-agent family
+
+| Repo | Role |
+|:--|:--|
+| **agent-firewall** | MCP tool-call **firewall** (this repo) |
+| [agent-call-audit](https://gitcode.com/gcw_MKhSyoGN/agent-call-audit) | audit **engine** |
+| [agent-memory-ledger](https://gitcode.com/gcw_MKhSyoGN/agent-memory-ledger) | verifiable **memory** layer |
+| [agent-audit-gateway](https://gitcode.com/gcw_MKhSyoGN/agent-audit-gateway) | HTTP **gateway** |
+| [agent-route-grid](https://gitcode.com/gcw_MKhSyoGN/agent-route-grid) | audited multi-agent **routing** |
+
 ## Why
 
 MCP servers hand your agent **arbitrary tool access**. A single `shell.exec` or `db.query` call with user-controlled arguments is enough to lose a machine or a database. The ecosystem's answer has been security gateways in Go — but if you are already on Python and want **provable, auditable enforcement** (not just a wall), this is the lightweight, dependency-free option.

@@ -5,6 +5,19 @@
 
 `agent-firewall` 是一个零依赖 Python 库，位于 **MCP 客户端与其服务器之间**，检查链路上的每一个 `tools/call` 消息。它是 **Verifiable-agent 家族**成员，与 `agent-call-audit`、`agent-memory-ledger`、`agent-audit-gateway`、`agent-route-grid` 共享同一套设计语言。
 
+> ⚠️ **研究原型 — AI 辅助开发。** 这是一个开源研究/实验原型，由 AI 辅助产出。
+> 按 **AS IS** 提供，不含任何形式的担保，非商业或生产级产品。使用者自担风险。
+
+## 产品家族（Verifiable-agent 家族）
+
+| 仓库 | 角色 |
+|:--|:--|
+| **agent-firewall** | MCP 工具调用**防火墙**（本仓库） |
+| [agent-call-audit](https://gitcode.com/gcw_MKhSyoGN/agent-call-audit) | 审计**引擎** |
+| [agent-memory-ledger](https://gitcode.com/gcw_MKhSyoGN/agent-memory-ledger) | 可验证**记忆层** |
+| [agent-audit-gateway](https://gitcode.com/gcw_MKhSyoGN/agent-audit-gateway) | HTTP **网关** |
+| [agent-route-grid](https://gitcode.com/gcw_MKhSyoGN/agent-route-grid) | 可审计多 Agent **路由** |
+
 ## 为什么需要它
 
 MCP 服务器会给你的 Agent **任意工具访问权**。一个携带用户可控参数的 `shell.exec` 或 `db.query` 调用，就足以让一台机器或一个数据库失守。生态里已有 Go 实现的安全网关——但如果你在 Python 技术栈上，并且想要**可证明、可审计的执行**（而不只是一堵墙），这是一个轻量、零依赖的选择。

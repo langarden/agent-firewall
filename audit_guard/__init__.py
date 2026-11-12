@@ -1,3 +1,8 @@
+# Vendored from agent-call-audit v0.1.0 (MIT, same maintainers).
+# The engine is kept verbatim so this firewall is self-contained and
+# installable without depending on a not-yet-released package. audit_guard is
+# the tamper-evident hash-chain engine; agent_firewall is the MCP adjudication
+# layer on top of it.
 """agent-call-audit — dependency-free guardrail layer for agent tool calls.
 
 Public surface::
