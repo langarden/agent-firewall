@@ -3,6 +3,16 @@
 > **Fail-closed MCP tool-call firewall for AI agents.**  
 > Give your agent's MCP tools a local firewall — deny by default, allowlist only, every verdict hash-chained.
 
+```bash
+pip install agent-firewall          # zero deps, Python 3.9+
+```
+
+<a href="https://gitcode.com/gcw_MKhSyoGN/agent-firewall"><img src="https://img.shields.io/badge/GitCode-gcw_MKhSyoGN%2Fagent-firewall-blue" alt="GitCode"></a>
+<a href="https://github.com/langarden/agent-firewall"><img src="https://img.shields.io/badge/GitHub-langarden%2Fagent-firewall-black" alt="GitHub"></a>
+<img src="https://img.shields.io/badge/tests-24%20passed-green" alt="tests">
+<img src="https://img.shields.io/badge/license-MIT-yellow" alt="license">
+<img src="https://img.shields.io/badge/python-3.9%2B-blue" alt="python">
+
 `agent-firewall` is a zero-dependency Python library that sits **between an MCP client and its server** and inspects every `tools/call` message on the wire. It is part of the **Verifiable-agent family** — same design language as `agent-call-audit`, `agent-memory-ledger`, `agent-audit-gateway`, `agent-route-grid`.
 
 > ⚠️ **Research prototype — AI-assisted development.** This is an open-source

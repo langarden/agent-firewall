@@ -3,6 +3,13 @@
 > **面向 AI Agent 的 fail-closed MCP 工具调用防火墙。**  
 > 给你的 MCP 工具加一道本地防火墙——默认拒绝、仅白名单放行、每一次判定都写入哈希链留痕。
 
+```bash
+pip install agent-firewall          # 零依赖，Python 3.9+
+```
+
+<a href="https://gitcode.com/gcw_MKhSyoGN/agent-firewall"><img src="https://img.shields.io/badge/GitCode-gcw_MKhSyoGN%2Fagent-firewall-blue" alt="GitCode"></a>
+<a href="https://github.com/langarden/agent-firewall"><img src="https://img.shields.io/badge/GitHub-langarden%2Fagent-firewall-black" alt="GitHub"></a>
+
 `agent-firewall` 是一个零依赖 Python 库，位于 **MCP 客户端与其服务器之间**，检查链路上的每一个 `tools/call` 消息。它是 **Verifiable-agent 家族**成员，与 `agent-call-audit`、`agent-memory-ledger`、`agent-audit-gateway`、`agent-route-grid` 共享同一套设计语言。
 
 > ⚠️ **研究原型 — AI 辅助开发。** 这是一个开源研究/实验原型，由 AI 辅助产出。
@@ -33,10 +40,6 @@ MCP 服务器会给你的 Agent **任意工具访问权**。一个携带用户�
 - **故障即拒绝** —— 畸形请求与内部错误一律解析为 `deny`，绝不 `allow`
 
 ## 安装
-
-```bash
-pip install agent-firewall
-```
 
 零运行时依赖（Python 3.9+）。
 
