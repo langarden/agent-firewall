@@ -23,6 +23,7 @@ dependencies = []
 
 [project.scripts]
 agent-firewall-demo = "agent_firewall.demo:main"
+agent-firewall = "agent_firewall.cli:main"
 
 [tool.setuptools]
 packages = ["agent_firewall", "audit_guard"]
