@@ -4,7 +4,7 @@
 > 给你的 MCP 工具加一道本地防火墙——默认拒绝、仅白名单放行、每一次判定都写入哈希链留痕。
 
 ```bash
-pip install agent-firewall          # 零依赖，Python 3.9+
+pip install frt-agent-firewall      # 零依赖，Python 3.9+
 ```
 
 <a href="https://gitcode.com/gcw_MKhSyoGN/agent-firewall"><img src="https://img.shields.io/badge/GitCode-gcw_MKhSyoGN%2Fagent-firewall-blue" alt="GitCode"></a>

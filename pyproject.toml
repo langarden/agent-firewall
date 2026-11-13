@@ -3,7 +3,7 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "agent-firewall"
+name = "frt-agent-firewall"
 version = "0.1.0"
 description = "Fail-closed MCP tool-call firewall with a tamper-evident hash chain. Give your AI agent's MCP tools a local firewall."
 readme = "README.md"

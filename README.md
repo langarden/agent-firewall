@@ -4,7 +4,7 @@
 > Give your agent's MCP tools a local firewall — deny by default, allowlist only, every verdict hash-chained.
 
 ```bash
-pip install agent-firewall          # zero deps, Python 3.9+
+pip install frt-agent-firewall       # zero deps, Python 3.9+
 ```
 
 <a href="https://gitcode.com/gcw_MKhSyoGN/agent-firewall"><img src="https://img.shields.io/badge/GitCode-gcw_MKhSyoGN%2Fagent-firewall-blue" alt="GitCode"></a>
@@ -47,7 +47,7 @@ MCP servers hand your agent **arbitrary tool access**. A single `shell.exec` or 
 ## Install
 
 ```bash
-pip install agent-firewall
+pip install frt-agent-firewall
 ```
 
 Zero runtime dependencies (Python 3.9+).
